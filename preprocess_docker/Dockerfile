@@ -1,5 +1,6 @@
 FROM python:3.8
 
+RUN mkdir -p input/raw_data input/preprocessed_data
 
 RUN apt -o Acquire::Check-Valid-Until=false -o Acquire::Check-Date=false update
 RUN apt -o Acquire::Check-Valid-Until=false -o Acquire::Check-Date=false install libcurl4-openssl-dev libssl-dev -y

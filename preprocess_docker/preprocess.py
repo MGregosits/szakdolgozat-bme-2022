@@ -69,13 +69,15 @@ def preprocess_df(_df):
     _df['time_stamp'] = pd.to_datetime(_df['time_stamp'])
     return _df
 
-df = preprocess_df(df)
+#df = preprocess_df(df)
 
-print('Preprocessing is DONE!')
+#print('Preprocessing is DONE!')
 
-df.to_csv(output_path,index=False, encoding='iso-8859-1', sep=';')
+#df.to_csv(output_path,index=False, encoding='iso-8859-1', sep=';')
 
-subprocess.run(["curl", "-i", "-X", "PUT", "-T", output_path, "http://adc3a714047a:9864/webhdfs/v1/input/preprocessed_data/" + raw_data_file_name + "?op=CREATE&namenoderpcaddress=namenode:9000&createflag=&createparent=true&overwrite=false"])
+#subprocess.run(["curl", "-i", "-X", "PUT", "-T", output_path, "http://adc3a714047a:9864/webhdfs/v1/input/preprocessed_data/" + raw_data_file_name + "?op=CREATE&namenoderpcaddress=namenode:9000&createflag=&createparent=true&overwrite=false"])
 
 os.remove(input_path)
+
+
 

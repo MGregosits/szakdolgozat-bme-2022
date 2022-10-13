@@ -29,9 +29,6 @@ def preprocess_dag():
        image="mgregosits/preprocess:0.0.4",
        command="python preprocess.py",
        network_mode="valhalla_default",
-       mounts=[
-    	Mount("/input", "/home/gmate/input", type='bind'),
-	]
    )
 
 
