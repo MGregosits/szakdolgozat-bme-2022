@@ -44,11 +44,5 @@ raw_data_folder = "input/raw_data"
 
 input_path = raw_data_folder + '/' + raw_data_file_name
 
-preprocessed_data_folder = "input/preprocessed_data"
-
-output_path = preprocessed_data_folder + '/' + raw_data_file_name
-
-#archive_folder = "/home/gmate/szakd/archived_raw_data"
-#archive_folder = "./archived_raw_data"
 
 client_hdfs.download(input_path, input_path, overwrite=True)
